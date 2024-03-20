@@ -7,65 +7,76 @@
     <title>Assignment 5</title>
     <script src="js/script.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <style>
-        h1              {margin-bottom: 30px;}
+    <style>         
         label           {font-weight: bold;}
-        input, select   {margin-bottom: 10px;}
-        form            {width: 30%; padding: 20px;}
+        input, select   {max-width: 45%; margin-bottom: 25px}
+        form            {width: 45%; padding: 20px; padding-left: 0;}
+        fieldset        {border: solid 2px orange; background-color: lightgray; padding: 10px 20px}
     </style>
 </head>
 <body class="m-4">
-    <h1>Employee Management System</h1>
-    <form id="empForm">
-        <label for="id">8-Digit Employee ID 
-            <input type="text" 
-              name="id" 
-              id="id" 
-              size="30" 
-              maxlength="8" 
-              required 
-              placeholder="12345678" 
-              autofocus />
-        </label>
-        <label for="name">First and Last Name
-            <input type="text" 
-              name="name" 
-              id="name" 
-              size="30" 
-              required 
-              placeholder="John Stewart" />
-        </label>
-        <label for="ext">First and Last Name
-            <input type="text" 
-              name="ext" 
-              id="ext" 
-              size="30" 
-              maxlength="4" 
-              required 
-              placeholder="1234" />
-        </label>
-        <label for="email">Email
-            <input 
-              type="email" 
-              name="eAddress" 
-              id="email" 
-              size="30" 
-              required 
-              pattern="[^ @]+@[^ @]+.[a-z]+"
-              placeholder="name@host.com" />
-        </label>
-        <label for="department">Department</label>
-        <select name="department" id="department">
-            <option value="Administrative">Administrative</option>
-            <option value="Engineering">Engineering</option>
-            <option value="Executive">Executive</option>
-            <option value="Marketing">Marketing</option>
-            <option value="QualityAssurance">Quality Assurance</option>
-            <option value="Sales" selected>Sales</option>
-        </select>
+    <main>
+        <section>
+            <h1>Employee Management System</h1>
+            <form id="empForm">
+                <fieldset>
 
-        <button id="submit" type="submit">Add Employee</button>
-     
-    </form>
+                    <label class="form-label" for="id">8-Digit Employee ID </label>
+                    <input type="text"
+                    class="form-control" 
+                    name="ID" 
+                    id="id" 
+                    maxlength="8" 
+                    required 
+                    placeholder="12345678" 
+                    autofocus />
+
+                    <label class="form-label" for="name">Full Name</label>
+                    <input type="text" 
+                    class="form-control"
+                    name="Name" 
+                    id="name" 
+                    required 
+                    placeholder="John Stewart" />
+
+                    <label class="form-label" for="ext">4-digit Extension</label>
+                    <input type="text" 
+                    class="form-control"
+                    name="Extension" 
+                    id="ext" 
+                    maxlength="4" 
+                    required 
+                    placeholder="1234" />
+
+                    <label class="form-label" for="email">Email
+                    </label>
+                    <input 
+                    type="email" 
+                    class="form-control"
+                    name="Email" 
+                    id="email" 
+                    required 
+                    pattern="[^ @]+@[^ @]+.[a-z]+"
+                    placeholder="name@host.com" />
+
+                    <label class="form-label" for="department">Department</label>
+                    <select name="Department" id="department" class="form-select">
+                        <option value="Administrative" selected>Administrative</option>
+                        <option value="Engineering">Engineering</option>
+                        <option value="Executive">Executive</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="QualityAssurance">Quality Assurance</option>
+                        <option value="Sales">Sales</option>
+                    </select>
+
+                    <button class="btn btn-primary" id="submit" type="submit">Add Employee</button>
+        
+                </fieldset>
+             
+            </form>
+
+        </section>
+    </main>
+
 </body>
 </html>
